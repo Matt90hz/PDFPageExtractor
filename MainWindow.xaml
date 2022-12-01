@@ -1,0 +1,71 @@
+﻿<Window x:Class="WPFEstraiFogliPDF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFEstraiFogliPDF"
+        mc:Ignorable="d"
+        Width="300" SizeToContent="Height"
+        Title="PDF Page Extractor">
+
+    <StackPanel Margin="15">
+
+        <StackPanel>
+            <Label>Origin (.pdf) file:</Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Grid.Column="0" x:Name="tbxOrigin"/>
+
+                <Button Grid.Column="2" x:Name="btnBrowseOrigin" Content=" ... " Click="btnBrowseOrigin_Click"/>
+                
+            </Grid>
+        </StackPanel>
+
+        <StackPanel>
+            <Label>Text to look for:</Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox Name="tbxText"/>
+
+                <Button Grid.Column="2" Name="btnBrowseText" Content=" ... " Click="btnBrowseText_Click"/>
+                
+            </Grid>
+        </StackPanel>
+        
+        <StackPanel>
+            <Label>Destination (.pdf) file:</Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <TextBox Name="tbxDestination"/>
+                
+                <Button Grid.Column="2" Name="btnBrowseDestiantion" Content=" ... " Click="btnBrowseDestiantion_Click"/>
+                
+            </Grid>
+            
+        </StackPanel>
+        
+        <StackPanel>
+            
+            <Button x:Name="btnExport" Margin="15" Width="70" Height="25" Click="btnExport_Click" Content="Export"/>
+            
+            <TextBlock x:Name="tbkInfo" d:Text="Infos..." TextWrapping="Wrap"/>
+            
+        </StackPanel>
+
+    </StackPanel>
+</Window>
