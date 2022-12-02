@@ -6,5 +6,5 @@ I needed to extract from a long PDF file all the pages that contained at least o
 
 ## How does it work?
 
-I personally published the app as a self contained executable but is up to you how to distribute it.
-Run the interface and it will require the paths of the files involved in the process, press the "extract" button and it is done.
+I personally published the app as a self contained executable but it is up to you how to distribute it.
+Run the interface and it will request you the paths of the files involved in the process, press the "extract" button and it is done.

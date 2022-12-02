@@ -20,15 +20,15 @@ namespace WPFEstraiFogliPDF
         protected override void OnInitialized(EventArgs e)
         {
             //display initial infos to the user
-            tbkInfo.Text = "The software look in every page of the origin file. " +
-                           "For each page look if any of the text in \"Text to look for\" is in the text of the page. " +
-                           "If any of the text is in the page it copies the page to the destination file.";
+            tbkInfo.Text = "The software looks into every page of the origin file. " +
+                           "For each page, it verifies if any of the text in \"Text to look for\" is in the text of the page. " +
+                           "If any of the text is in the page, it copies the page to the destination file.";
 
             base.OnInitialized(e);
         }
 
         /// <summary>
-        /// Shows file dialog and returns the selected file.
+        /// Show file dialog and return the selected file.
         /// </summary>
         /// <param name="filter">Filter to apply to the dialog. <see cref="FileDialog.Filter"/></param>
         /// <returns>Selected path.</returns>
@@ -62,7 +62,7 @@ namespace WPFEstraiFogliPDF
                 await Task.Run(() => PDFEdit.ExtractPages(new Uri(originPath), new Uri(destinationPath), new Uri(textPath)));
 
                 //notify the successful extraction
-                tbkInfo.Text = "Extraction succeed.";
+                tbkInfo.Text = "Extraction successful.";
             }
             catch(Exception ex)  
             {
@@ -78,7 +78,7 @@ namespace WPFEstraiFogliPDF
         }
 
         /// <summary>
-        /// Open dilog for browsing the origin .pdf file path.
+        /// Open dialog for browsing the origin .pdf file path.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -88,7 +88,7 @@ namespace WPFEstraiFogliPDF
         }
 
         /// <summary>
-        /// Open dilog for browsing the file .txt with the text to select.
+        /// Open dialog for browsing the file .txt with the text to select.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -98,7 +98,7 @@ namespace WPFEstraiFogliPDF
         }
 
         /// <summary>
-        /// Open dilog for browsing the destination .pdf file path.
+        /// Open dialog for browsing the destination .pdf file path.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
